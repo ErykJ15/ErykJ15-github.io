@@ -1,0 +1,52 @@
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    padding: Sem;
+}
+
+:root{
+    /* colours */
+    --blue: #3949ab;
+    --darker-blue: #14193b;
+
+    --grey: #bdbdbd;
+    --lighter-grey: #f5f5ff;
+
+    --light-green: #66bb6a;
+    --medium-green: #9bc34a;
+}
+
+.button{
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .2em .4em;
+
+}
+
+/* button sizes */
+
+.button-small{
+    font-size: 1em;
+}
+
+.button-medium{
+    font-size: 1.5em;
+}
+
+.button-large{
+    font-size: 2m;
+}
+
+.button-extra-large{
+    font-size: 2.5em;
+}
+
+/* button backgrounf colours */
+
+.blue-button{
+    background-color: var(--light-green);
+    color: var(--lighter-grey);
+}
+
