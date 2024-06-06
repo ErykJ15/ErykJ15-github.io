@@ -36,7 +36,7 @@ body{
 }
 
 .button-large{
-    font-size: 2m;
+    font-size: 2em;
 }
 
 .button-extra-large{
@@ -45,8 +45,8 @@ body{
 
 /* button backgrounf colours */
 
-.blue-button{
-    background-color: var(--light-green);
-    color: var(--lighter-grey);
+.grey-button{
+    background-color: var(--lighter-grey);
+    color: var(--grey);
 }
 
