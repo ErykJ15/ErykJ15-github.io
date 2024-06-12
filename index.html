@@ -47,22 +47,26 @@
 			</td>
 			<td>
 				<div class = "container">		
-					<div onclick="copyTextPhone()" class = "button button-medium grey-button" align = "right" > <span><img src="phoneicon.jpg.png" 
+					<div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneicon.jpg.png" 
 						style="width: 27px; height: 27px;" alt="Nature" align = "left"> </span> 07392659922 </div>
 					<hr>
 					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="emailicon.png" 
 						style="width: 27px; height: 27px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
 					<hr>
-					<a href="https://github.com/ErykJ15" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubicon.png" 
+					<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubicon.png" 
 						style="width: 27px; height: 27px;" alt="Nature" align = "left"></span> GitHub </div> </a>
 					<script>
-						function copyTextPhone(){
-							navigator.clipboard.writeText("07392659922");
+						function copyTextPhone() {
+							navigator.clipboard.writeText("07392659922")
+							alert("Text copied successfully.")
 						}
+									
 					</script>
 					<script>
-						function copyTextEmail(){
+						function copyTextEmail()
+						{
 							navigator.clipboard.writeText("erykj450@gmail.com");
+							alert("Text copied successfully.")
 						}
 					</script>
 				</div>
