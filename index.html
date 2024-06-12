@@ -46,13 +46,25 @@
 				</table>
 			</td>
 			<td>
-				<div class = "container">
-					
-					<div class = "button button-medium grey-button" align = "right" > <span><img src="phoneicon.jpg.png" style="width: 27px; height: 27px;" alt="Nature" align = "left"></span> Phone Number </div>
+				<div class = "container">		
+					<div onclick="copyTextPhone()" class = "button button-medium grey-button" align = "right" > <span><img src="phoneicon.jpg.png" 
+						style="width: 27px; height: 27px;" alt="Nature" align = "left"> </span> 07392659922 </div>
 					<hr>
-					<div class = "button button-medium grey-button" align = "right"> <span><img src="emailicon.png" style="width: 27px; height: 27px;" alt="Nature" align = "left"></span>Email </div>
+					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="emailicon.png" 
+						style="width: 27px; height: 27px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
 					<hr>
-					<div class = "button button-medium grey-button" align = "right"><span><img src="githubicon.png" style="width: 27px; height: 27px;" alt="Nature" align = "left"></span> GitHub </div>
+					<a href="https://github.com/ErykJ15" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubicon.png" 
+						style="width: 27px; height: 27px;" alt="Nature" align = "left"></span> GitHub </div> </a>
+					<script>
+						function copyTextPhone(){
+							navigator.clipboard.writeText("07392659922");
+						}
+					</script>
+					<script>
+						function copyTextEmail(){
+							navigator.clipboard.writeText("erykj450@gmail.com");
+						}
+					</script>
 				</div>
 			</td>
 		</tr>
