@@ -50,3 +50,8 @@ body{
     color: var(--grey);
 }
 
+.fire-btn{
+    background-color: var(--lighter-grey);
+    color: var(--grey);
+}
+

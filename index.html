@@ -12,16 +12,17 @@
 
 <style>
 	.frame {
-	  width: 600;
-	  height: 600;
-	  border: 3px solid #e07612;
+		position: relative;
+	  width: 10;
+	  height: 80;
+	  border: 4px solid #bdbdbd;
 	  background: #f7f7f7;
-	  margin: auto;
-	  padding: 0, 0;
+	  margin: 0;
+	  padding: 5px;
 	}
 	img {
-	  width: 100%;
-	  height: 100%;
+	  width: 700px;
+	  height: auto;
 	}
   </style>
 
@@ -46,21 +47,26 @@
 				</table>
 			</td>
 			<td>
-				<div class = "container">		
+				<div class = "container">	
+					<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+					<a href="index.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Home </a>
+					<a href="projects.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Projects </a>
+					<a button class = "button fire-btn button-medium grey-button" style="text-decoration:none;" align = "right" > <span> </span> Suprise! </a>
+					<hr color="white">
 					<div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneblack.png" 
 						style="width: 30px; height: 30px;" alt="Nature" align = "left"> </span> 07392659922 </div>
-					<hr>
+					<hr color="white">
 					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="gmailblack.png" 
 						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
-					<hr>
+					<hr color="white">
 					<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubblack.png" 
 						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span> GitHub </div> </a>
 					<script>
 						function copyTextPhone() {
 							navigator.clipboard.writeText("07392659922")
 							alert("Phone number copied successfully.")
-						}
-									
+						}								
 					</script>
 					<script>
 						function copyTextEmail()
@@ -68,6 +74,23 @@
 							navigator.clipboard.writeText("erykj450@gmail.com");
 							alert("Email copied successfully.")
 						}
+					</script>
+					<script>
+						const fireBtn = document.querySelector(".fire-btn");
+
+						fireBtn.addEventListener("click", () => {
+							confetti({
+							particleCount: 500,
+							spread: 700,
+							origin: {x:1, y: 0.6 },
+							});
+
+							confetti({
+							particleCount: 500,
+							spread: 700,
+							origin: { x: 0,y: 0.6 },
+							});
+						})
 					</script>
 				</div>
 			</td>
@@ -78,111 +101,46 @@
 
 	<!--About(start)-->
 	<table id="about" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
+		cellpadding="0" cellspacing="0" bgcolor="white">
 		<tr>
 			<td>
 				<table border="0" cellpadding="15"
 					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Monospace" size="7"
-								color="#a929b4">
-								About Me
-							</font>
-							<hr color="#a929b4" width="90">
-						</td>
-					</tr>
 
 					<tr>
-						<td width="60%">
+						<td width="49%">
 							
 							 <div class="frame">
-      							<img src="ErykEating.JPG" alt="Nature">
+      							<img src="utaheryk.png" alt="Nature">
     						</div>
 
 						<td width="70%">
 							<font face="Monospace" size="4"
-								color="white">
-								Hi there! My name is Eryk Jastrzebski and I'm a third-year student at the University of Hull studying computer science. I have a strong passion for programming and have spent countless hours perfecting my craft. My primary focus is on developing innovative and efficient solutions to complex problems using a range of programming languages, including Python, Java, and C++.
-								<hr color="black">
-								
-								<hr color="black">
-								Throughout my academic career, I've gained a wide range of skills that allow me to design, implement and debug programs. I've worked on several group projects where I've collaborated with other programmers to develop software that meets the client's requirements. My ability to work as part of a team is one of my strongest attributes, and I enjoy the challenge of working with others to find solutions to complex problems.
-								<hr color="black">
-								
-								<hr color="black">
-								In my free time, I enjoy exploring new technologies and experimenting with different programming languages. I'm always looking to improve my skills and learn new things. I believe that staying up-to-date with the latest trends and technologies is essential in the fast-paced world of programming.
-								<hr color="black">
-								
-								<hr color="black">
-									I'm excited to continue my journey as a programmer and look forward to contributing to the industry in the years to come. Thank you for taking the time to read my portfolio and get to know me a little better!
-								<hr color="black">
+								color="black">
+								Hi there! My name is Eryk Jastrzebski, and I recently graduated from the University of Hull with a degree in computer science. I love programming; 
+								it's more than simply my subject of study. I've devoted many hours to perfecting my abilities since I enjoy coming up with creative, 
+								effective answers to challenging issues. I have a wide range of tools, from C++ to Javascript and Rust, and I don't hesitate to use them.
+								<hr color="white">
+								I've developed a broad range of abilities during my academic career that allow me to efficiently design, build, and debug programmes. 
+								I've done well working in groups, collaborating with other programmers on different projects to produce software that satisfies the needs of our clients. 
+								One of my best skills is my ability to work well in a group, and I enjoy the challenge of solving complex challenges with others.
+								<hr color="white">
+								When I'm not lost in programming, I like to explore new cities and take in the beauty of nature. 
+								I enjoy exploring urban environments and going on excursions along beautiful paths. I find that
+								 these experiences—whether they involve strolling through busy cities or climbing a mountain—provide the ideal counterbalance to my existence focused mostly on technology. 
+								In the rapidly changing world of technology, keeping up with industry developments is essential, 
+								but so is taking time to unwind in nature and explore new places.
+								<hr color="white">
+								I'm excited to carry on with my programming career and make a positive impact on the field in the years to come. 
+								I appreciate you taking the time to browse my portfolio and learn more about who I am. Take a look at some of the projects that I have worked on, on the "Projects" page.
+								<hr color="white">
 							</font>
 						</td>
 					</tr>
 				</table>
-				<hr color="black">
-				<hr color="black">
-				<hr color="black">
 			</td>
 		</tr>
 	</table>
 	<!--About(end)-->
-
-
-
-	<!--Achievement(start)-->
-	<table id="achievements" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center" valign="middle">
-							<font face="Monospace" size="7" color="#a929b4">
-								Achievements
-								<hr color="#a929b4" width="100">
-							</font>
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<font face="Monospace" size="4" color="white">
-								<ul>
-									<li>
-										<b>Winner of The Thingmaster Event </b>
-										<ul>
-											<li>
-												The Thring Master Vent game jam was an exciting event that challenged us to create a video game from scratch in a short amount of time. 
-												The event was a great opportunity to showcase our skills, creativity, and teamwork, and we were determined to give it our all.
-
-												<hr color="black">
-								
-												<hr color="black">
-												I am proud to have been a part of this winning team, and I believe that this experience has not only helped me improve my game development 
-												skills but also boosted my confidence as a designer. I look forward to participating in more game jams and pushing the boundaries of game design.
-												<hr color="black">
-								
-												<hr color="black">
-											</li>
-											<li>
-												<div class="frame">
-													<img src="threethinggame.png" alt="Nature">
-											  </div>
-											</li>
-										</ul>
-									</li>		
-								</ul>
-							</font>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Achievement(end)-->	
 </body>
 </html>
