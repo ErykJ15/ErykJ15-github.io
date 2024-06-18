@@ -1,6 +1,6 @@
-<body>
+<!DOCTYPE html >
 <html>
-
+<body>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content=
@@ -16,12 +16,11 @@
 	  width: 10;
 	  height: 80;
 	  border: 4px solid #bdbdbd;
-	
 	  margin: 0;
 	  padding: 5px;
 	}
 	img {
-	  width: 700px;
+	  width: 500px;
 	  height: auto;
 	}
 	.dark-mode{
@@ -33,90 +32,189 @@
 	}
   </style>
 
-<!--Home(start)-->
-<table id="home" border="0" width="100%"
-cellpadding="20" cellspacing="0" background-color>
-<tr>
-    <td>
-        <table border="0" cellpadding="0px"
-            cellspacing="0" width="80%" align="left">
-            <tr>
-                <td align="left" valign="left">
-                    <div class="header">
-                        <h2> 
-                            <font face="Roboto"
-                            style ="font-size: 80px" color> Eryk Jastrzebski
-                            <small style= "font-size: 32px"> <span style="color: #bdbdbd;">Software Programmer </span></small> 
-                            </font>	
-                        </h2>
-                </div>
-            </tr>				
-        </table>
-    </td>
-    <td>
-        <div class = "container">	
-            <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+	<!--Home(start)-->
+	<table id="home" border="0" width="100%"
+		cellpadding="20" cellspacing="0" background-color>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0px"
+					cellspacing="0" width="80%" align="left">
+					<tr>
+						<td align="left" valign="left">
+							<div class="header">
+								<h2> 
+									<font face="Roboto"
+									style ="font-size: 80px" color> Eryk Jastrzebski
+									<small style= "font-size: 32px"> <span style="color: #bdbdbd;">Software Programmer </span></small> 
+									</font>	
+								</h2>
+						</div>
+					</tr>				
+				</table>
+			</td>
+			<td>
+				<div class = "container">	
+					<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 
-            <a href="index.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Home </a>
-            <a href="projects.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Projects </a>
-            <a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
-            <a button class = "button fire-btn button-medium grey-button" style="text-decoration:none;" align = "right" > <span> </span> Suprise! </a>
-            <hr color="white">
-            <div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneblack.png" 
-                style="width: 30px; height: 30px;" alt="Nature" align = "left"> </span> 07392659922 </div>
-            <hr color="white">
-            <div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="gmailblack.png" 
-                style="width: 30px; height: 30px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
-            <hr color="white">
-            <a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubblack.png" 
-                style="width: 30px; height: 30px;" alt="Nature" align = "left"></span> GitHub </div> </a>
-            <script>
-                function copyTextPhone() {
-                    navigator.clipboard.writeText("07392659922")
-                    alert("Phone number copied successfully.")
-                }								
-            </script>
-            <script>
-                function copyTextEmail()
-                {
-                    navigator.clipboard.writeText("erykj450@gmail.com");
-                    alert("Email copied successfully.")
-                }
-            </script>
-            <script>
-                const fireBtn = document.querySelector(".fire-btn");
+					<a href="index.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Home </a>
+					<a href="projects.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Projects </a>
+        			<a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
+					<a button class = "button fire-btn button-medium grey-button" style="text-decoration:none;" align = "right" > <span> </span> Suprise! </a>
+					<hr color="white">
+					<div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneblack.png" 
+						style="width: 30px; height: 30px;" alt="Nature" align = "left"> </span> 07392659922 </div>
+					<hr color="white">
+					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="gmailblack.png" 
+						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
+					<hr color="white">
+					<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubblack.png" 
+						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span> GitHub </div> </a>
+					<script>
+						function copyTextPhone() {
+							navigator.clipboard.writeText("07392659922")
+							alert("Phone number copied successfully.")
+						}								
+					</script>
+					<script>
+						function copyTextEmail()
+						{
+							navigator.clipboard.writeText("erykj450@gmail.com");
+							alert("Email copied successfully.")
+						}
+					</script>
+					<script>
+						const fireBtn = document.querySelector(".fire-btn");
 
-                fireBtn.addEventListener("click", () => {
-                    confetti({
-                    particleCount: 500,
-                    spread: 700,
-                    origin: {x:1, y: 0.6 },
-                    });
+						fireBtn.addEventListener("click", () => {
+							confetti({
+							particleCount: 500,
+							spread: 700,
+							origin: {x:1, y: 0.6 },
+							});
 
-                    confetti({
-                    particleCount: 500,
-                    spread: 700,
-                    origin: { x: 0,y: 0.6 },
-                    });
-                })
-            </script>
-            <script>
-            function lightDarkToggle(){
-                const body = document.body;
-                const darkModeToggle = document.getElementById('darkmode-toggle');
-                body.classList.toggle('dark-mode');
-                darkModeToggle.checked = !darkModeToggle.checked;
-            }
-            </script>			
-        </div>
-    </td>
-</tr>
-</table>
-<!--Home(end)-->
-<!--About(start)-->
-<table id="about" border="0" width="100%"
-cellpadding="0" cellspacing="0" background-color>
+							confetti({
+							particleCount: 500,
+							spread: 700,
+							origin: { x: 0,y: 0.6 },
+							});
+						})
+					</script>
+					<script>
+					function lightDarkToggle(){
+						const body = document.body;
+						const darkModeToggle = document.getElementById('darkmode-toggle');
+						body.classList.toggle('dark-mode');
+						darkModeToggle.checked = !darkModeToggle.checked;
+					}
+					</script>			
+				</div>
+			</td>
+		</tr>
+	</table>
+	<!--Home(end)-->
 
+    <!--About(start)-->
+	<table id="about" border="0" width="100%"
+    cellpadding="0" cellspacing="0" background_color>
+    <tr>
+        <td>
+            <table border="0" cellpadding="15"
+                cellspacing="0" width="80%" align="center">
+
+                <tr>
+                    <h3 align = "center">
+                        Three Thing Game - Camel Rancher
+                    </h3>
+                    <td width="30%">
+                         <div class="frame">
+                              <img src="threethinggame.png" alt="Nature">
+                        </div>
+                        <td width="30%">
+                            <div class="frame">
+                                 <img src="threethinggame.png" alt="Nature">
+                           </div>
+                    <td width="70%">
+                        <font face="Roboto" size="4"
+                            color>
+                            Camel rancher text
+                            <hr color>
+                        </font>
+                    </td>
+                </tr>
+
+            </table>
+            <table border="0" cellpadding="15"
+                cellspacing="0" width="80%" align="center">
+
+                <tr>
+                    <h3 align = "center">
+                        Pathfinding title
+                    </h3>
+                    <td width="30%">
+                         <div class="frame">
+                              <img src="threethinggame.png" alt="Nature">
+                        </div>
+                        <td width="30%">
+                            <div class="frame">
+                                 <img src="threethinggame.png" alt="Nature">
+                           </div>
+                    <td width="70%">
+                        <font face="Roboto" size="4"
+                            color>
+                            Pathfinding
+                            <hr color>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="15"
+                cellspacing="0" width="80%" align="center">
+                <tr>
+                    <h3 align = "center">
+                        Treasure for two title
+                    </h3>
+                    <td width="30%">
+                         <div class="frame">
+                              <img src="threethinggame.png" alt="Nature">
+                        </div>
+                        <td width="30%">
+                            <div class="frame">
+                                 <img src="threethinggame.png" alt="Nature">
+                           </div>
+                    <td width="70%">
+                        <font face="Roboto" size="4"
+                            color>
+                            Treasure for two
+                            <hr color>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="15"
+                cellspacing="0" width="80%" align="center">
+                <tr>
+                    <h3 align = "center">
+                        Pilk Engine title
+                    </h3>
+                    <td width="30%">
+                         <div class="frame">
+                              <img src="threethinggame.png" alt="Nature">
+                        </div>
+                        <td width="30%">
+                            <div class="frame">
+                                 <img src="threethinggame.png" alt="Nature">
+                           </div>
+                    <td width="70%">
+                        <font face="Roboto" size="4"
+                            color>
+                            pilk engine
+                            <hr color>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
 <!--About(end)-->
 </body>
