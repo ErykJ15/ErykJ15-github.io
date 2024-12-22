@@ -1,160 +1,184 @@
-<!DOCTYPE html >
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1.0">
-	<link rel = "stylesheet" href="buttonstyle.css"/>
-	<link rel = "stylesheet" href="fontstyle.css"/>
-	<title>Eryk Jastrzebski's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buttonstyle.css"/>
+    <link rel="stylesheet" href="fontstyle.css"/>
+    <title>Eryk Jastrzebski's Portfolio</title>
+
+    <style>
+        .frame {
+            position: relative;
+            width: 10;
+            height: 80;
+            border: 4px solid #bdbdbd;
+            margin: 0;
+            padding: 5px;
+        }
+
+        img {
+            width: 700px;
+            height: auto;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        hr {
+            border: solid var(--body-text-color);
+        }
+    </style>
+
 </head>
+<body>
 
-<style>
-	.frame {
-		position: relative;
-	  width: 10;
-	  height: 80;
-	  border: 4px solid #bdbdbd;
-	  margin: 0;
-	  padding: 5px;
-	}
-	img {
-	  width: 700px;
-	  height: auto;
-	}
-	.dark-mode{
-		background-color: black;
-  		color: white;
-	}
-	hr{
-		border: solid var(--body-text-color);
-	}
-  </style>
+<!-- Home Section -->
+<table id="home" border="0" width="100%" cellpadding="20" cellspacing="0">
+    <tr>
+        <td>
+            <table border="0" cellpadding="0px" cellspacing="0" width="80%" align="left">
+                <tr>
+                    <td align="left" valign="left">
+                        <div class="header">
+                            <h2>
+                                <font face="Roboto" style="font-size: 80px" color>
+                                    Eryk Jastrzebski
+                                    <small style="font-size: 32px">
+                                        <span style="color: #bdbdbd;"> Software Programmer </span>
+                                    </small>
+                                </font>
+                            </h2>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <div class="container">
+                <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 
-	<!--Home(start)-->
-	<table id="home" border="0" width="100%"
-		cellpadding="20" cellspacing="0" background-color>
-		<tr>
-			<td>
-				<table border="0" cellpadding="0px"
-					cellspacing="0" width="80%" align="left">
-					<tr>
-						<td align="left" valign="left">
-							<div class="header">
-								<h2> 
-									<font face="Roboto"
-									style ="font-size: 80px" color> Eryk Jastrzebski
-									<small style= "font-size: 32px"> <span style="color: #bdbdbd;">Software Programmer </span></small> 
-									</font>	
-								</h2>
-						</div>
-					</tr>				
-				</table>
-			</td>
-			<td>
-				<div class = "container">	
-					<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+                <a href="index.html" style="text-decoration:none;" class="button button-medium grey-button" align="right">Home</a>
+                <a href="projects.html" style="text-decoration:none;" class="button button-medium grey-button" align="right">Projects</a>
+                
+                <!-- Light/Dark Mode Toggle -->
+                <a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
+                
+                <a class="button fire-btn button-medium grey-button" style="text-decoration:none;" align="right">Surprise!</a>
+                
+                <hr color="white">
+                
+                <div onclick="copyTextPhone()" class="button button-medium grey-button" align="right">
+                    <span><img src="phoneblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"> </span> 07392659922
+                </div>
+                
+                <hr color="white">
+                
+                <div onclick="copyTextEmail()" class="button button-medium grey-button" align="right">
+                    <span><img src="gmailblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"></span>erykj450@gmail.com
+                </div>
+                
+                <hr color="white">
+                
+                <a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;">
+                    <div class="button button-medium grey-button" align="right">
+                        <span><img src="githubblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"></span> GitHub
+                    </div>
+                </a>
 
-					<a href="index.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Home </a>
-					<a href="projects.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Projects </a>
-        			<a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
-					<a button class = "button fire-btn button-medium grey-button" style="text-decoration:none;" align = "right" > <span> </span> Suprise! </a>
-					<hr color="white">
-					<div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"> </span> 07392659922 </div>
-					<hr color="white">
-					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="gmailblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
-					<hr color="white">
-					<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span> GitHub </div> </a>
-					<script>
-						function copyTextPhone() {
-							navigator.clipboard.writeText("07392659922")
-							alert("Phone number copied successfully.")
-						}								
-					</script>
-					<script>
-						function copyTextEmail()
-						{
-							navigator.clipboard.writeText("erykj450@gmail.com");
-							alert("Email copied successfully.")
-						}
-					</script>
-					<script>
-						const fireBtn = document.querySelector(".fire-btn");
+                <!-- JavaScript Functions -->
+                <script>
+                    function copyTextPhone() 
+					{
+                        navigator.clipboard.writeText("07392659922");
+                        alert("Phone number copied successfully.");
+                    }
 
-						fireBtn.addEventListener("click", () => {
-							confetti({
-							particleCount: 500,
-							spread: 700,
-							origin: {x:1, y: 0.6 },
-							});
+                    function copyTextEmail() 
+					{
+                        navigator.clipboard.writeText("erykj450@gmail.com");
+                        alert("Email copied successfully.");
+                    }
 
-							confetti({
-							particleCount: 500,
-							spread: 700,
-							origin: { x: 0,y: 0.6 },
-							});
-						})
-					</script>
-					<script>
-					function lightDarkToggle(){
-						const body = document.body;
-						const darkModeToggle = document.getElementById('darkmode-toggle');
-						body.classList.toggle('dark-mode');
-						darkModeToggle.checked = !darkModeToggle.checked;
-					}
-					</script>			
-				</div>
-			</td>
-		</tr>
-	</table>
-	<!--Home(end)-->
+                    const fireBtn = document.querySelector(".fire-btn");
 
+                    fireBtn.addEventListener("click", () => 
+					{
+                        confetti({
+                            particleCount: 500,
+                            spread: 700,
+                            origin: {x:1, y: 0.6},
+                        });
 
-	<!--About(start)-->
-	<table id="about" border="0" width="100%"
-		cellpadding="0" cellspacing="0" background_color>
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
+                        confetti({
+                            particleCount: 500,
+                            spread: 700,
+                            origin: {x: 0, y: 0.6},
+                        });
+                    });
 
-					<tr>
-						<td width="49%">
-							
-							 <div class="frame">
-      							<img src="erykself.jpg" alt="Nature">
-    						</div>
+                    function lightDarkToggle() 
+					{
+                        const body = document.body;
+                        body.classList.toggle('dark-mode');
 
-						<td width="70%">
-							<font face="Roboto" size="4"
-								color>
-								Hi there! My name is Eryk Jastrzebski, and I recently graduated from the University of Hull with a degree in computer science. I love programming; 
-								it's more than just my subject of study. I've devoted the last few years to improving my abilities. I enjoy coming up with creative, 
-								effective solutions to challenging problems. I have experience in a number of programming languages, from C++ to C# and Rust, and I don't hesitate to use them.
-								<hr>
-								I've developed a broad range of abilities during my academic career including implementing software designs, maintaining code through debugging, testing for quality assurance, and working with a team of programmers. 
-								I have worked on a number of collaborative programmming projects and have overcome the challenges inherent to them. During previous projects, I have created designs and implemented them using architectural models such as ECS.
-								My best skill is my ability to work well in a group, and I welcome the challenge of solving complex issues with others.
-								<hr>
-								When I'm not lost in programming, I like to explore new cities and take in the beauty of nature. 
-								I enjoy exploring urban environments and going on excursions along beautiful paths. I find that
-								these experiences—whether they involve strolling through busy cities or climbing a mountain—provide the ideal counterbalance to my existence focused mostly on technology. 
-								In the rapidly changing world of technology, keeping up with industry developments is essential, 
-								but so is taking time to unwind in nature and explore new places.
-								<hr>
-								I'm excited to carry on with my programming career and make a positive impact on the field in the years to come. 
-								I appreciate you taking the time to browse my portfolio and learn more about who I am. Take a look at some of the projects that I have worked on, on the <a href="projects.html" style="text-decoration:none;">"Projects"</a> page.
-								<hr color>
-							</font>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+                        // Store mode in localStorage
+                        if (body.classList.contains('dark-mode')) {
+                            localStorage.setItem('darkMode', 'enabled');
+                        } else {
+                            localStorage.setItem('darkMode', 'disabled');
+                        }
+                    }
+
+                    // Check for saved dark mode state and apply it
+                    window.onload = function () 
+					{
+                        const body = document.body;
+                        if (localStorage.getItem('darkMode') === 'enabled') {
+                            body.classList.add('dark-mode');
+                        } else {
+                            body.classList.remove('dark-mode');
+                        }
+                    };
+                </script>
+
+            </div>
+        </td>
+    </tr>
+</table>
+<!-- Home Section End -->
+
+<!-- About Section -->
+<table id="about" border="0" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+                <tr>
+                    <td width="49%">
+                        <div class="frame">
+                            <img src="erykself.jpg" alt="Nature">
+                        </div>
+                    </td>
+                    <td width="70%">
+                        <font face="Roboto" size="4" color>
+                            Hi there! My name is Eryk Jastrzebski, and I recently graduated from the University of Hull with a degree in computer science. I love programming; it's more than just my subject of study. I've devoted the last few years to improving my abilities. I enjoy coming up with creative, effective solutions to challenging problems. I have experience in a number of programming languages, from C++ to C# and Rust, and I don't hesitate to use them.
+                            <hr>
+                            I've developed a broad range of abilities during my academic career including implementing software designs, maintaining code through debugging, testing for quality assurance, and working with a team of programmers. I have worked on a number of collaborative programming projects and have overcome the challenges inherent to them. During previous projects, I have created designs and implemented them using architectural models such as ECS. My best skill is my ability to work well in a group, and I welcome the challenge of solving complex issues with others.
+                            <hr>
+                            When I'm not lost in programming, I like to explore new cities and take in the beauty of nature. I enjoy exploring urban environments and going on excursions along beautiful paths. I find that these experiences—whether they involve strolling through busy cities or climbing a mountain—provide the ideal counterbalance to my existence focused mostly on technology. In the rapidly changing world of technology, keeping up with industry developments is essential, but so is taking time to unwind in nature and explore new places.
+                            <hr>
+                            I'm excited to carry on with my programming career and make a positive impact on the field in the years to come. I appreciate you taking the time to browse my portfolio and learn more about who I am. Take a look at some of the projects that I have worked on, on the <a href="projects.html" style="text-decoration:none;">"Projects"</a> page.
+                            <hr color>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- About Section End -->
+
 </body>
 </html>

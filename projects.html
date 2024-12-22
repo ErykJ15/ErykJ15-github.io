@@ -53,61 +53,90 @@
 				</table>
 			</td>
 			<td>
-				<div class = "container">	
-					<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-
-					<a href="index.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Home </a>
-					<a href="projects.html" style="text-decoration:none;" class = "button button-medium grey-button" align = "right" > <span> </span> Projects </a>
-        			<a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
-					<a button class = "button fire-btn button-medium grey-button" style="text-decoration:none;" align = "right" > <span> </span> Suprise! </a>
-					<hr color="white">
-					<div onclick="copyTextPhone()" class = "button button-medium grey-button"  align = "right" > <span><img src="phoneblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"> </span> 07392659922 </div>
-					<hr color="white">
-					<div onclick="copyTextEmail()" class = "button button-medium grey-button" align = "right"> <span><img src="gmailblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span>erykj450@gmail.com </div>
-					<hr color="white">
-					<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;"><div class = "button button-medium grey-button" align = "right"><span><img src="githubblack.png" 
-						style="width: 30px; height: 30px;" alt="Nature" align = "left"></span> GitHub </div> </a>
-					<script>
-						function copyTextPhone() {
-							navigator.clipboard.writeText("07392659922")
-							alert("Phone number copied successfully.")
-						}								
-					</script>
-					<script>
-						function copyTextEmail()
-						{
-							navigator.clipboard.writeText("erykj450@gmail.com");
-							alert("Email copied successfully.")
-						}
-					</script>
-					<script>
-						const fireBtn = document.querySelector(".fire-btn");
-
-						fireBtn.addEventListener("click", () => {
-							confetti({
-							particleCount: 500,
-							spread: 700,
-							origin: {x:1, y: 0.6 },
+				<td>
+					<div class="container">
+						<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+		
+						<a href="index.html" style="text-decoration:none;" class="button button-medium grey-button" align="right">Home</a>
+						<a href="projects.html" style="text-decoration:none;" class="button button-medium grey-button" align="right">Projects</a>
+						
+						<!-- Light/Dark Mode Toggle -->
+						<a onclick="lightDarkToggle()" class="button button-medium grey-button">Light/Dark</a>
+						
+						<a class="button fire-btn button-medium grey-button" style="text-decoration:none;" align="right">Surprise!</a>
+						
+						<hr color="white">
+						
+						<div onclick="copyTextPhone()" class="button button-medium grey-button" align="right">
+							<span><img src="phoneblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"> </span> 07392659922
+						</div>
+						
+						<hr color="white">
+						
+						<div onclick="copyTextEmail()" class="button button-medium grey-button" align="right">
+							<span><img src="gmailblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"></span>erykj450@gmail.com
+						</div>
+						
+						<hr color="white">
+						
+						<a href="https://github.com/ErykJ15" target="_blank" style="text-decoration:none;">
+							<div class="button button-medium grey-button" align="right">
+								<span><img src="githubblack.png" style="width: 30px; height: 30px;" alt="Nature" align="left"></span> GitHub
+							</div>
+						</a>
+		
+						<!-- JavaScript Functions -->
+						<script>
+							function copyTextPhone() {
+								navigator.clipboard.writeText("07392659922");
+								alert("Phone number copied successfully.");
+							}
+		
+							function copyTextEmail() {
+								navigator.clipboard.writeText("erykj450@gmail.com");
+								alert("Email copied successfully.");
+							}
+		
+							const fireBtn = document.querySelector(".fire-btn");
+		
+							fireBtn.addEventListener("click", () => {
+								confetti({
+									particleCount: 500,
+									spread: 700,
+									origin: {x:1, y: 0.6},
+								});
+		
+								confetti({
+									particleCount: 500,
+									spread: 700,
+									origin: {x: 0, y: 0.6},
+								});
 							});
-
-							confetti({
-							particleCount: 500,
-							spread: 700,
-							origin: { x: 0,y: 0.6 },
-							});
-						})
-					</script>
-					<script>
-					function lightDarkToggle(){
-						const body = document.body;
-						const darkModeToggle = document.getElementById('darkmode-toggle');
-						body.classList.toggle('dark-mode');
-						darkModeToggle.checked = !darkModeToggle.checked;
-					}
-					</script>			
-				</div>
+		
+							function lightDarkToggle() {
+								const body = document.body;
+								body.classList.toggle('dark-mode');
+		
+								// Store mode in localStorage
+								if (body.classList.contains('dark-mode')) {
+									localStorage.setItem('darkMode', 'enabled');
+								} else {
+									localStorage.setItem('darkMode', 'disabled');
+								}
+							}
+		
+							// Check for saved dark mode state and apply it
+							window.onload = function () {
+								const body = document.body;
+								if (localStorage.getItem('darkMode') === 'enabled') {
+									body.classList.add('dark-mode');
+								} else {
+									body.classList.remove('dark-mode');
+								}
+							};
+						</script>
+		
+					</div>
 			</td>
 		</tr>
 	</table>
